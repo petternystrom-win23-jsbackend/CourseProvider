@@ -21,25 +21,30 @@ public class CourseUpdateRequest
     public virtual PricesUpdateRequest? Prices { get; set; }
     public virtual ContentUpdateRequest? Content { get; set; }
 }
+
 public class AuthorUpdateRequest
 {
     public string? Name { get; set; }
 }
+
 public class PricesUpdateRequest
 {
     public string? Currency { get; set; }
     public decimal Price { get; set; }
     public decimal Discount { get; set; }
 }
+
 public class ContentUpdateRequest
 {
     public string? Description { get; set; }
     public string[]? Includes { get; set; }
+
+    public string[]? CourseIncludes { get; set; }
     public virtual List<ProgramDetailItemUpdateRequest>? ProgramDetails { get; set; }
 }
+
 public class ProgramDetailItemUpdateRequest
 {
-    public int Id { get; set; }
     public string? Title { get; set; }
     public string? Description { get; set; }
 }

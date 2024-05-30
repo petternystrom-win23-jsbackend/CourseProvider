@@ -1,8 +1,10 @@
-﻿namespace CourseProvider.Infrastructure.Data.Entities;
-
-public class ContentEntity
+﻿namespace CourseProvider.Infrastructure.Data.Entities
 {
-    public string? Description { get; set; }
-    public string[]? Includes { get; set; }
-    public virtual List<ProgramDetailItemEntity>? ProgramDetails { get; set; }
+    public class ContentEntity
+    {
+        public string? Description { get; set; }
+        public string[]? Includes { get; set; }
+        public string[]? CourseIncludes { get; set; }
+        public virtual List<ProgramDetailItemEntity>? ProgramDetails { get; set; }
+    }
 }

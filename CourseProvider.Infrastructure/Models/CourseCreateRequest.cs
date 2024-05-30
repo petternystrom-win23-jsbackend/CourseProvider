@@ -3,7 +3,7 @@
 namespace CourseProvider.Infrastructure.Models;
 
 public class CourseCreateRequest
-{   
+{
     public string? ImageUri { get; set; }
     public string? ImageHeaderUri { get; set; }
     public bool IsBestSeller { get; set; }
@@ -20,25 +20,30 @@ public class CourseCreateRequest
     public virtual PricesCreateRequest? Prices { get; set; }
     public virtual ContentCreateRequest? Content { get; set; }
 }
+
 public class AuthorCreateRequest
 {
     public string? Name { get; set; }
 }
+
 public class PricesCreateRequest
 {
     public string? Currency { get; set; }
     public decimal Price { get; set; }
     public decimal Discount { get; set; }
 }
+
 public class ContentCreateRequest
 {
     public string? Description { get; set; }
     public string[]? Includes { get; set; }
+    public string[]? CourseIncludes { get; set; }
     public virtual List<ProgramDetailItemCreateRequest>? ProgramDetails { get; set; }
 }
+
+
 public class ProgramDetailItemCreateRequest
 {
-    public int Id { get; set; }
     public string? Title { get; set; }
     public string? Description { get; set; }
 }
